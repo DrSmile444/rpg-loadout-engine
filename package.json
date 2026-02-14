@@ -1,9 +1,9 @@
 {
-  "name": "typescript-boilerplate",
+  "name": "rpg-loadout-engine",
   "version": "1.3.21",
-  "main": "src/main.ts",
+  "main": "src/app.ts",
   "scripts": {
-    "start": "npx tsx ./src/main.ts",
+    "start": "npx tsx ./src/app.ts",
     "lint": "cross-env TIMING=1 npx eslint",
     "lint:fix": "npm run lint -- --fix",
     "lint:debug": "npm run lint -- --debug",
