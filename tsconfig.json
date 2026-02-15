@@ -1,19 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "esnext",
     "baseUrl": "./src",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "strict": true,
+    "outDir": "dist",
     "allowJs": true,
     "skipLibCheck": true,
     "paths": {
-      "@domain/*": [
-        "domain/*"
-      ],
-      "@intro/*": [
-        "intro/*"
-      ]
+      "@domain/*": ["domain/*"],
+      "@intro/*": ["intro/*"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true
