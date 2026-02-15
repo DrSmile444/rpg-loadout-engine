@@ -1,4 +1,4 @@
-export interface Character {
+export interface CharacterSeed {
   id: string;
   class: string; // currently wide: any string can sneak in
   level: number;
@@ -6,7 +6,7 @@ export interface Character {
   inventory: string[];
 }
 
-export const characters: Character[] = [
+export const CHARACTERS = [
   {
     id: 'c1',
     class: 'mage',
@@ -21,4 +21,8 @@ export const characters: Character[] = [
     knownSpells: ['shield_bash'],
     inventory: ['iron_sword', 'health_potion'],
   },
-];
+] as const satisfies CharacterSeed[];
+
+export type CharacterId = (typeof CHARACTERS)[number]['id'];
+
+export type CharacterClass = (typeof CHARACTERS)[number]['class'];
