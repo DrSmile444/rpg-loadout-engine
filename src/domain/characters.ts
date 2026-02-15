@@ -21,6 +21,13 @@ export const CHARACTERS = [
     knownSpells: ['shield_bash'],
     inventory: ['iron_sword', 'health_potion'],
   },
+  {
+    id: 'c3',
+    class: 'cleric',
+    level: 10,
+    knownSpells: ['heal'],
+    inventory: ['oak_staff', 'health_potion'],
+  },
 ] as const satisfies CharacterSeed[];
 
 export type CharacterId = (typeof CHARACTERS)[number]['id'];

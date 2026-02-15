@@ -1,15 +1,17 @@
-export interface Item {
+import type { CharacterClass } from './characters';
+
+export interface ItemSeed {
   id: string;
   slot: 'armor' | 'consumable' | 'weapon';
   minLevel: number;
-  allowedClasses: string[];
+  allowedClasses: CharacterClass[];
 }
 
 export const ITEMS = [
-  { id: 'oak_staff', stol: 'weapon', minLevel: 1, allowedClasses: ['mage', 'cleric'] },
+  { id: 'oak_staff', slot: 'weapon', minLevel: 1, allowedClasses: ['mage', 'cleric'] },
   { id: 'iron_sword', slot: 'weapon', minLevel: 1, allowedClasses: ['warrior'] },
   { id: 'health_potion', slot: 'consumable', minLevel: 1, allowedClasses: ['mage', 'cleric', 'warrior'] },
-] as const;
+] as const satisfies ItemSeed[];
 
 export type ItemId = (typeof ITEMS)[number]['id'];
 
